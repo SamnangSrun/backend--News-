@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Default light theme for html/body/root */
+  html,
+  body,
+  #root {
+    @apply bg-white text-gray-900;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Dark mode globally — apply when the html element has the `dark` class */
+  html.dark,
+  html.dark body,
+  html.dark #root {
+    /* use the requested dark background */
+    background-color: #1a1a1a;
+    color: #f3f4f6; /* approx Tailwind text-gray-100 */
+  }
+
+  /* Optional: Links and buttons */
+  a,
+  button {
+    @apply text-gray-900;
+  }
+
+  html.dark a,
+  html.dark button {
+    color: #f3f4f6;
+  }
+
+  /* Optional: Inputs, textareas */
+  input,
+  textarea,
+  select {
+    @apply bg-white text-gray-900;
+  }
+
+  html.dark input,
+  html.dark textarea,
+  html.dark select {
+    background-color: #2a2a2a;
+    color: #f3f4f6;
+  }
+}
